@@ -1,0 +1,2 @@
+-- Keymaps for core/editor stuff only (like save, quit, window movement).
+-- Do NOT add plugin-specific keymaps here — those belong in the corresponding plugin spec file (in lua/plugins).
