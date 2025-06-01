@@ -2,6 +2,8 @@
 -- Nothing plugin-specific — just general editor behavior I want everywhere.
 
 local opt = vim.opt
+
+vim.o.clipboard = "unnamedplus"
 --[[ 
 [ ] Line numbers (vim.opt.number)
 [ ] Relative line numbers (vim.opt.relativenumber)
