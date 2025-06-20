@@ -37,4 +37,4 @@ keymap.set({'n', 'x'}, 'x', '"_x')
 keymap.set({'n', 'x'}, 'X', '"_d')
 
 -- select all text
-keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
+keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>', { desc = "select all text"})

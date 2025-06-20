@@ -31,14 +31,17 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 
 -- file
 opt.swapfile = false -- swapfile
-opt.autoread = true -- auto reload on external change
+opt.autoread = false -- auto reload on external change
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
--- Explorer tree style
-vim.cmd("let g:netrw_liststyle = 3")
+-- colorscheme
+opt.termguicolors = true -- enable 24-bit rgb colors
+opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
+
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
