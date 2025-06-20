@@ -20,5 +20,4 @@ require("lazy").setup({
 
 -- Can add small one liner here
 return {
-
 }
