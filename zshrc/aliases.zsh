@@ -5,11 +5,15 @@ alias edit-zsh="vim ~/.config/zshrc"
 alias reload-zsh="source ~/.zshrc"
 alias edit-nvm="vim ~/.config/nvim"
 alias edit-tmux="vim ~/.tmux.conf"
-#alias edit-clang-format="vim ~/.clang-format"
-#alias edit-prettier="vim ~/.prettierrc"
+alias reload-tmux="source ~/.tmux.conf"
+alias edit-format="vim ~/.config/format"
 
 ########## generic helpers
 alias untar="tar -xzf"
+
+########## overrides
+alias vim="nvim"
+alias vi="nvim"
 
 ##########  compilation / execution
 alias comp="cc -Wall -Wextra -Werror *.c"
@@ -33,7 +37,7 @@ alias ta="tmux attach -t"
 alias td="tmux detach"
 alias tr="tmux rename"
 alias tk="tmux kill-session -t"
-alias tn="tmux new -t"
+alias tn="tmux new -s"
 
 #########  docker
 alias du="docker compose up --build"

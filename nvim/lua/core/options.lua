@@ -3,46 +3,54 @@
 
 local opt = vim.opt
 
-vim.o.clipboard = "unnamedplus"
---[[ 
-[ ] Line numbers (vim.opt.number)
-[ ] Relative line numbers (vim.opt.relativenumber)
-[ ] Enable mouse support (vim.opt.mouse)
-[ ] Use system clipboard (vim.opt.clipboard)
-[ ] Scroll context (vim.opt.scrolloff / sidescrolloff)
-[ ] Enable line wrap (vim.opt.wrap)
+-- numbers
+opt.relativenumber = true
+opt.number = true
 
-Tabs & Indentation:
-[ ] Use spaces instead of tabs (vim.opt.expandtab)
-[ ] Set tab width (vim.opt.tabstop)
-[ ] Set indent width (vim.opt.shiftwidth)
-[ ] Auto/smart indent (vim.opt.autoindent / smartindent)
+-- clipboard
+opt.clipboard = "unnamedplus"
 
-Search:
-[ ] Case-insensitive search (vim.opt.ignorecase)
-[ ] Smart case (vim.opt.smartcase)
-[ ] Highlight search results (vim.opt.hlsearch)
-[ ] Live search as I type (vim.opt.incsearch)
+-- tabs & indentation
+opt.tabstop = 4       -- 4 spaces for tabs (prettier default)
+opt.shiftwidth = 4    -- 4 spaces for indent width
+opt.expandtab = true  -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
+opt.wrap = false
 
-UI & Behavior:
-[ ] Enable true color (vim.opt.termguicolors)
-[ ] Show cursor line (vim.opt.cursorline)
-[ ] Always show sign column (vim.opt.signcolumn)
-[ ] Faster keymaps (vim.opt.timeoutlen)
-[ ] Faster updates (vim.opt.updatetime)
-[ ] Don't redraw during macros (vim.opt.lazyredraw)
-[ ] Better splits (vim.opt.splitbelow / splitright)
+-- search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
 
-Files:
-[ ] Disable swap files (vim.opt.swapfile)
-[ ] Enable undo file (vim.opt.undofile)
-[ ] Auto-reload changed files (vim.opt.autoread)
+-- cursor 
+opt.cursorline = true -- highlight cursor position
+opt.scrolloff = 10 -- x scroll offset
+opt.sidescrolloff = 10 -- x scroll offset
 
-Minimal UI:
-[ ] Hide mode info (vim.opt.showmode)
-[ ] Show typed commands (vim.opt.showcmd)
-[ ] Set command height (vim.opt.cmdheight)
-[ ] Always show statusline (vim.opt.laststatus)
-[ ] Show cursor position (vim.opt.ruler)
-]]
+-- backspace
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
+-- file
+opt.swapfile = false -- swapfile
+opt.autoread = true -- auto reload on external change
+
+-- split windows
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
+
+-- Explorer tree style
+vim.cmd("let g:netrw_liststyle = 3")
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
+
+-- WARNING `vim.o.sessionoptions` should contain 'localoptions' to make sure
+-- filetype and highlighting work correctly after a session is restored.
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

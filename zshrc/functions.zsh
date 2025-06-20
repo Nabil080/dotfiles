@@ -1,13 +1,11 @@
 #### functions
 
 ## clone from git config --get user.name
-## error if no username
 clone () {
 	username=$(git config --get user.name)
-	echo $username
+	## TODO: error if no username
 	git clone git@github.com:Nabil080/${1}.git
 }
-
 
 ## clone from custom username
 cloneFrom () {
