@@ -9,11 +9,10 @@
 echo "Setting up ZSH config"
 ln -sf "$PWD/zshrc" "$HOME/.config"
 
+### NVIM
+echo "Setting up nvim config"
+ln -sf "$PWD/nvim" "$HOME/.config"
 
 ### TMUX
 ln -sf "$PWD/.tmux.conf" "$HOME"
 git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
-
-### NVIM
-# echo "Setting up nvim config"
-# ln -sf "$PWD/nvim" "$HOME/.config"
