@@ -4,12 +4,11 @@
 # Any change made locally will be reflected on the repo, allowing a remote update if you choose to push
 
 
-### BASH
-echo "Setting up BASH config"
-ln -sf "$PWD/.bashrc" "$HOME"
-ln -sf "$PWD/bashrc" "$HOME/.config"
+### ZSH
+# TODO: specify custom folder config if omz, else add an autoloader
+echo "Setting up ZSH config"
+ln -sf "$PWD/zshrc" "$HOME/.config"
 
-source "$HOME/.bashrc"
 
 ### NVIM
 # echo "Setting up nvim config"
