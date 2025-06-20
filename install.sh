@@ -8,8 +8,9 @@
 echo "Setting up BASH config"
 ln -sf "$PWD/.bashrc" "$HOME"
 ln -sf "$PWD/bashrc" "$HOME/.config"
+
 source "$HOME/.bashrc"
 
 ### NVIM
-echo "Setting up nvim config"
-ln -sf "$PWD/nvim" "$HOME/.config"
+# echo "Setting up nvim config"
+# ln -sf "$PWD/nvim" "$HOME/.config"

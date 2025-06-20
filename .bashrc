@@ -7,3 +7,9 @@ for file in "$MODULES_DIR"/*.sh; do
 	      source "$file"
 	fi
 done
+
+## notes
+# better prompt
+# better history
+# better autocomplete
+

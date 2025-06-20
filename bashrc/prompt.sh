@@ -1,4 +1,1 @@
-# POSH=agnoster
-
-# eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/EDM115-newline.omp.json)"
-# eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/zen.toml)"
+export PS1="test> "
