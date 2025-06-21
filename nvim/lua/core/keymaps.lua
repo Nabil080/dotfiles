@@ -27,10 +27,10 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- arrow keys
-keymap.set("n", "<Left>", '<cmd>echo "Stop using arrow keys"<CR>')
-keymap.set("n", "<Right>", '<cmd>echo "Stop using arrow keys"<CR>')
-keymap.set("n", "<Up>", '<cmd>echo "Stop using arrow keys"<CR>')
-keymap.set("n", "<Down>", '<cmd>echo "Stop using arrow keys"<CR>')
+keymap.set({"n", "i"}, "<Left>", '<cmd>echo "Stop using arrow keys"<CR>')
+keymap.set({"n", "i"}, "<Right>", '<cmd>echo "Stop using arrow keys"<CR>')
+keymap.set({"n", "i"}, "<Up>", '<cmd>echo "Stop using arrow keys"<CR>')
+keymap.set({"n", "i"}, "<Down>", '<cmd>echo "Stop using arrow keys"<CR>')
 
 -- x won't copy to register
 keymap.set({'n', 'x'}, 'x', '"_x')
