@@ -5,8 +5,11 @@ return {
         local wk = require("which-key")
 
         wk.add({
-          { "<leader>s", group = "splits" },
-          { "<leader>t", group = "tabs" },
+          { "<leader>s", group = " Splits" },
+          { "<leader>t", group = " Tabs" },
+          { "<leader>f", group = " Telescope"},
         })
+
+        vim.keymap.set('n', '<leader>w', '<cmd>WhichKey<cr>', { desc = 'WhichKey' })
     end,
 }
