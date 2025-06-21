@@ -17,11 +17,11 @@ return {
     }
 
     local my_lualine_theme = {
-      normal = {
+    normal = {
         a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
-      },
+    },
       insert = {
         a = { bg = colors.green, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
