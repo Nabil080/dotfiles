@@ -11,19 +11,19 @@ return {
         local actions = require("telescope.actions")
 
         telescope.setup({
-          defaults = {
-            path_display = { "smart" },
-            mappings = {
-              i = {
-                ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-                ["<C-j>"] = actions.move_selection_next, -- move to next result
-                ["<Left>"] = false,
-                ["<Right>"] = false,
-                ["<Up>"] = false,
-                ["<Down>"] = false,
-              },
+            defaults = {
+                path_display = { "smart" },
+                mappings = {
+                    i = {
+                        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+                        ["<C-j>"] = actions.move_selection_next,     -- move to next result
+                        ["<Left>"] = false,
+                        ["<Right>"] = false,
+                        ["<Up>"] = false,
+                        ["<Down>"] = false,
+                    },
+                },
             },
-          },
         })
 
         telescope.load_extension("fzf")
@@ -38,14 +38,12 @@ return {
         keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Recent files' })
 
         -- Current working directory
-        keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files'})
+        keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
         keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Find string' })
-        keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+        -- keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 
         -- Git
         keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Git files' })
-        keymap.set('n', '<leader>fst', builtin.git_status, { desc = 'Git status' })
-
 
         -- Lsp
         keymap.set('n', '<leader>fw', builtin.lsp_workspace_symbols, { desc = 'Workspace Symbols' })

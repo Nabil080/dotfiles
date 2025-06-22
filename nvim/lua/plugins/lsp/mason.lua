@@ -1,10 +1,9 @@
 return {
     "mason-org/mason.nvim",
-     version = "^1.0.0",
     dependencies = {
-        {"mason-org/mason-lspconfig.nvim",  version = "^1.0.0"}
+        "mason-org/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
-    opts = {},
     config = function()
         -- import mason
         local mason = require("mason")
@@ -20,17 +19,32 @@ return {
             },
         })
 
-    -- import mason-lspconfig
-    local mason_lspconfig = require("mason-lspconfig")
+        -- import lsp installer
+        local mason_lspconfig = require("mason-lspconfig")
 
-      -- list of servers for mason to install
-    mason_lspconfig.setup({
-      ensure_installed = {
-        "ts_ls", -- Typescript & Javascript LSP
-        "lua_ls",
-      },
-    })
+        -- list of servers for mason to install
+        mason_lspconfig.setup({
+            ensure_installed = {
+                "ts_ls", -- Typescript & Javascript LSP
+                "lua_ls",
+                -- "clangd"
+            },
+        })
 
-    
+
+        -- import tool installer
+        local mason_tool_installer = require("mason-tool-installer")
+
+        -- list of tools for mason to install
+        mason_tool_installer.setup({
+            ensure_installed = {
+                "prettier",                         -- prettier formatter
+                { "eslint_d", version = "13.1.2" }, -- js/ts linter
+                "hadolint",                         -- docker lint
+                "luacheck",                         -- lua linting
+                "luaformatter",                     -- lua format
+                "clang-format",                     -- c/c++
+            },
+        })
     end
 }

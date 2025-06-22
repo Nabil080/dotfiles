@@ -16,3 +16,8 @@ ln -sf "$PWD/nvim" "$HOME/.config"
 ### TMUX
 ln -sf "$PWD/.tmux.conf" "$HOME"
 git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
+
+### FORMAT FILES
+echo "Adding clang-format"
+ln -sf "$PWD/format/.clang-format" "$HOME"
+
