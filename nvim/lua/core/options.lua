@@ -42,7 +42,6 @@ opt.termguicolors = true -- enable 24-bit rgb colors
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
 
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -57,3 +56,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- WARNING `vim.o.sessionoptions` should contain 'localoptions' to make sure
 -- filetype and highlighting work correctly after a session is restored.
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+
+-- other
+vim.cmd("syntax off") -- disable vim syntax to use only treesitter
