@@ -27,7 +27,7 @@ return {
             ensure_installed = {
                 "ts_ls", -- Typescript & Javascript LSP
                 "lua_ls",
-                -- "clangd"
+                "clangd"
             },
         })
 
