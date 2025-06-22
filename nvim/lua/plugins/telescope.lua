@@ -45,5 +45,10 @@ return {
         -- Git
         keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Git files' })
         keymap.set('n', '<leader>fst', builtin.git_status, { desc = 'Git status' })
+
+
+        -- Lsp
+        keymap.set('n', '<leader>fw', builtin.lsp_workspace_symbols, { desc = 'Workspace Symbols' })
+        keymap.set('n', '<leader>fd', builtin.lsp_document_symbols, { desc = 'Document Symbols' })
     end,
 }
