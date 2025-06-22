@@ -44,6 +44,6 @@ return {
 
         -- Git
         keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Git files' })
-        keymap.set('n', '<leader>fs', builtin.git_status, { desc = 'Git status' })
+        keymap.set('n', '<leader>fst', builtin.git_status, { desc = 'Git status' })
     end,
 }

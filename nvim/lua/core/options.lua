@@ -40,7 +40,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- colorscheme
 opt.termguicolors = true -- enable 24-bit rgb colors
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
+opt.signcolumn = "yes"  -- show sign column so that text doesn't shift when there is no sign
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

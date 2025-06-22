@@ -23,6 +23,8 @@ return {
                 "vimdoc",
                 "c",
                 "cpp",
+                "markdown",
+                "markdown_inline",
             },
 
             -- Automatically install missing parsers when entering buffer
