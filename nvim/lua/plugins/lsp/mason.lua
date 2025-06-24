@@ -27,6 +27,7 @@ return {
             ensure_installed = {
                 "ts_ls", -- Typescript & Javascript LSP
                 "lua_ls",
+                "vimls",
                 "clangd"
             },
         })
@@ -41,9 +42,9 @@ return {
                 "prettier",                         -- prettier formatter
                 { "eslint_d", version = "13.1.2" }, -- js/ts linter
                 "hadolint",                         -- docker lint
-                "luacheck",                         -- lua linting
-                "luaformatter",                     -- lua format
-                "clang-format",                     -- c/c++
+                -- "luacheck",                         -- lua linting
+                -- "luaformatter",                     -- lua format
+                "clang-format", -- c/c++
             },
         })
     end

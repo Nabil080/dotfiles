@@ -9,9 +9,8 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- navigation
-keymap.set("n", "K", "7k", { desc = "Jump 7 above" })
-keymap.set("n", "J", "7j", { desc = "Jump 7 below" })
-
+keymap.set("n", "<A-k>", "7k", { desc = "Jump 7 above" })
+keymap.set("n", "<A-j>", "7j", { desc = "Jump 7 below" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
