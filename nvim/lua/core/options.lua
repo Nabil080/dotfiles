@@ -21,9 +21,9 @@ opt.wrap = false
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
 
--- cursor 
-opt.cursorline = true -- highlight cursor position
-opt.scrolloff = 10 -- x scroll offset
+-- cursor
+opt.cursorline = true  -- highlight cursor position
+opt.scrolloff = 10     -- x scroll offset
 opt.sidescrolloff = 10 -- x scroll offset
 
 -- backspace
@@ -39,8 +39,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- colorscheme
 opt.termguicolors = true -- enable 24-bit rgb colors
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes"  -- show sign column so that text doesn't shift when there is no sign
+opt.background = "dark"  -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = "yes"   -- show sign column so that text doesn't shift when there is no sign
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
