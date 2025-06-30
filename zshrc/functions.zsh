@@ -12,10 +12,17 @@ cloneFrom () {
 	git clone git@github.com:${2}/${1}.git
 }
 
+## silently run a cmd in the bg
+runSilent() {
+	("$@" &> /dev/null &)
+}
+
+
 ## run a cmd on all subdirectories
 runCommand() {
     for d in ./*/ ; do /bin/zsh -c "(cd "$d" && "$@")"; done
 }
+
 
 ## curl request helper
 # $1 -> request type (GET POST..)
