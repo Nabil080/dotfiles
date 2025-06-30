@@ -20,4 +20,5 @@ git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
 ### FORMAT FILES
 echo "Adding clang-format"
 ln -sf "$PWD/format/.clang-format" "$HOME"
-
+echo "Adding prettierrc"
+ln -sf "$PWD/format/.prettierrc" "$HOME"

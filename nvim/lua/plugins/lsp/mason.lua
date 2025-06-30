@@ -28,7 +28,7 @@ return {
                 "ts_ls", -- Typescript & Javascript LSP
                 "lua_ls",
                 "vimls",
-                "clangd"
+                -- "clangd",
             },
         })
 
@@ -43,8 +43,8 @@ return {
                 { "eslint_d", version = "13.1.2" }, -- js/ts linter
                 "hadolint",                         -- docker lint
                 -- "luacheck",                         -- lua linting
-                -- "luaformatter",                     -- lua format
-                "clang-format", -- c/c++
+                "luaformatter",                     -- lua format
+                "clang-format",                     -- c/c++
             },
         })
     end
