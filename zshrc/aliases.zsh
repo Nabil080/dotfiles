@@ -8,6 +8,10 @@ alias edit-tmux="vim ~/.tmux.conf"
 alias reload-tmux="source ~/.tmux.conf"
 alias edit-format="vim ~/.config/format"
 
+########## syntax helpers
+alias dc="cd"
+alias sl="ls"
+
 ########## generic helpers
 alias untar="tar -xzf"
 

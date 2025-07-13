@@ -14,6 +14,8 @@ return {
                 cpp = { "clang-format" },
                 c = { "clang-format" },
                 lua = { "luaformatter" },
+                php = { "pretty-php" },
+                css = { "prettier" }
             },
             format_on_save = {
                 lsp_fallback = true,
