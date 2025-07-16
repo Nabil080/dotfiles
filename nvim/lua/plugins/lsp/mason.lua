@@ -28,7 +28,8 @@ return {
                 "ts_ls", -- Typescript & Javascript LSP
                 "lua_ls",
                 "vimls",
-                -- "clangd",
+                "clangd",
+                "phpactor"
             },
         })
 
@@ -45,6 +46,7 @@ return {
                 -- "luacheck",                         -- lua linting
                 "luaformatter",                     -- lua format
                 "clang-format",                     -- c/c++
+                "pretty-php",
             },
         })
     end
