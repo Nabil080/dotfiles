@@ -79,9 +79,9 @@ rd /s /q "%ZIP_TEMP%"
 rem ---- 7. PUSH TO ITCH.IO WITH BUTLER ----------------------
 echo.
 echo === PUSHING TO ITCH.IO ===
-butler push "%EXPORT_DIR%\%PROJECT_NAME%.zip"   "spritelessdev/%PROJECT_NAME%:web"     || goto :error
-butler push "%EXPORT_DIR%\%PROJECT_NAME%.exe"   "spritelessdev/%PROJECT_NAME%:windows" || goto :error
-butler push "%EXPORT_DIR%\%PROJECT_NAME%.x86_64" "spritelessdev/%PROJECT_NAME%:linux"   || goto :error
+butler push "%EXPORT_DIR%\%PROJECT_NAME%.zip"   "kozumagames/%PROJECT_NAME%:web"     || goto :error
+butler push "%EXPORT_DIR%\%PROJECT_NAME%.exe"   "kozumagames/%PROJECT_NAME%:windows" || goto :error
+butler push "%EXPORT_DIR%\%PROJECT_NAME%.x86_64" "kozumagames/%PROJECT_NAME%:linux"   || goto :error
 
 rem ---- 8. SUCCESS ------------------------------------------
 echo.
